@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReachioMail TM Logo to Favicon Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .logo-display {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .logo-display img {
+            width: 64px;
+            height: 64px;
+        }
+        .steps {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 10px;
+        }
+        .download-link {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .download-link:hover {
+            background: #ea580c;
+        }
+    </style>
+</head>
+<body>
+    <h1>ReachioMail TM Logo to Favicon Converter</h1>
+    
+    <div class="logo-display">
+        <h3>Your Logo (32x32):</h3>
+        <img src="/logo.svg" alt="ReachioMail Logo" id="logo">
+        
+        <h3>Your Logo (16x16 - Favicon size):</h3>
+        <img src="/logo.svg" alt="ReachioMail Logo" style="width: 16px; height: 16px;">
+    </div>
+
+    <div class="steps">
+        <h3>How to convert to favicon.ico:</h3>
+        <ol>
+            <li><strong>Option 1 (Online Converter):</strong>
+                <ul>
+                    <li>Go to <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a></li>
+                    <li>Upload the logo.svg file from your public folder</li>
+                    <li>Download the generated favicon.ico</li>
+                    <li>Replace the existing favicon.ico in your public folder</li>
+                </ul>
+            </li>
+            <li><strong>Option 2 (Browser Download):</strong>
+                <ul>
+                    <li>Right-click on the logo above</li>
+                    <li>Select "Save image as..."</li>
+                    <li>Save as "favicon.ico" in your public folder</li>
+                </ul>
+            </li>
+            <li><strong>Option 3 (Command Line):</strong>
+                <ul>
+                    <li>Install ImageMagick: <code>brew install imagemagick</code> (Mac) or download for Windows</li>
+                    <li>Run: <code>convert logo.svg -resize 16x16 favicon.ico</code></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="/logo.svg" download class="download-link">Download SVG Logo</a>
+        <a href="https://favicon.io/favicon-converter/" target="_blank" class="download-link">Convert Online</a>
+    </div>
+
+    <script>
+        // Add click handler to download logo
+        document.getElementById('logo').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = '/logo.svg';
+            link.download = 'reachiomail-logo.svg';
+            link.click();
+        });
+    </script>
+</body>
+</html> 
