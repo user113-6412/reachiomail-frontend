@@ -17,19 +17,19 @@ function DemoModal({ isOpen, onClose }) {
     freelancer: {
       name: 'Freelancer Agency',
       description: 'Pitch service to prospects',
-      prompt: 'Write a friendly intro email to {{Name}}, a {{Role}} at {{Company}}. Say I recently helped a similar client grow their inbound leads by 40% in 2 months. Mention I specialize in marketing growth and would love to explore if we could collaborate.',
+      prompt: 'My name is Anabel. Write a friendly intro email to {{Name}}, a {{Role}} at {{Company}}. Say I recently helped a similar client grow their inbound leads by 40% in 2 months. Mention I specialize in marketing growth and would love to explore if we could collaborate.',
       csvContent: 'Name,Email,Company,Role\nGrace Miller,grace@midnightventures.com,Midnight Ventures,Partner\nTom Jacobs,tom@foundryanalytics.io,Foundry Analytics,CTO\nSarah Chen,sarah@techstartup.co,TechStartup,Marketing Director'
     },
-    jobseeker: {
+    careerconquerer: {
       name: 'Career Conquerer',
       description: 'Reach hiring managers',
-      prompt: 'Write a confident cold email to {{Name}}, a {{Role}} at {{Company}}. Mention I recently led a product launch that hit 50K users in 3 months, and I’m now exploring new opportunities. Say I admire their work and would love to connect.',
+      prompt: 'My name is Anabel. Write a confident cold email to {{Name}}, a {{Role}} at {{Company}}. Mention I recently led a product launch that hit 50K users in 3 months, and I’m now exploring new opportunities. Say I admire their work and would love to connect.',
       csvContent: 'Name,Email,Company,Role\nAlex Johnson,alex@innovatecorp.com,InnovateCorp,Senior Developer\nMaria Rodriguez,maria@techgiant.io,TechGiant,Product Manager\nDavid Kim,david@startupx.com,StartupX,UX Designer'
     },
     founder: {
       name: 'SaaS Founder',
       description: 'Talk to early customers',
-      prompt: 'Write a short intro email to {{Name}}, a {{Role}} at {{Company}}. Say I’m the founder of a scheduling tool that cut coordination time by 60% for early users. Ask if they’d be open to a quick chat to see if this could help their team too.',
+      prompt: 'My name is Anabel.Write a short intro email to {{Name}}, a {{Role}} at {{Company}}. Say I’m the founder of a scheduling tool that cut coordination time by 60% for early users. Ask if they’d be open to a quick chat to see if this could help their team too.',
       csvContent: 'Name,Email,Company,Role\nEmma Wilson,emma@growthco.com,GrowthCo,Operations Manager\nJames Lee,james@scaleup.io,ScaleUp,CEO\nLisa Park,lisa@startupz.com,StartupZ,COO'
     }
   };
@@ -141,8 +141,8 @@ function DemoModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-        <div className="p-8">
+      <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[98vh] overflow-y-auto">
+        <div className="p-6">
           {/* Header */}
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900">Try <span className="text-lime-400">ReachioMail</span> Demo</h2>
@@ -221,7 +221,7 @@ function DemoModal({ isOpen, onClose }) {
 
               {/* AI Prompt */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">AI Prompt</h3>
+                <h3 className="text-lg font-semibold mb-3">AI Prompt. Replace Anabel with your name.</h3>
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}

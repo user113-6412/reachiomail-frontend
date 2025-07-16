@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mailmergefromsheets.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /pricing-info
+Allow: /how-to-use
+Allow: /how-to-prompt
+Allow: /privacy-policy
+Allow: /terms-of-service
+
+# Crawl delay (optional - be respectful to your server)
+Crawl-delay: 1 
