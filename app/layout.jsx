@@ -16,18 +16,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W89LC3DKMZ"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-W89LC3DKMZ');
-            `,
-          }}
-        />
+        {/* Analytics */}
+
       </head>
       <body
         className={`${quicksand.variable} font-quicksand antialiased`}
