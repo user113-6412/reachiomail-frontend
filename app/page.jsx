@@ -27,7 +27,7 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center px-4 py-8 sm:py-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-center mb-6 sm:mb-8 px-2">
-            Mail Merge from Google Sheets 
+            Send Personalized Emails from a Spreadsheet — Instantly
           </h1> 
           
           <p className="text-2xl sm:text-3xl md:text-4xl text-center font-black leading-tight mb-8 sm:mb-12 max-w-5xl mx-auto px-2">
