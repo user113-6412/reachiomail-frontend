@@ -32,7 +32,7 @@ export default function Home() {
           
           <p className="text-2xl sm:text-3xl md:text-4xl text-center font-black leading-tight mb-8 sm:mb-12 max-w-5xl mx-auto px-2">
             <span className="text-lime-400">Reach </span> 
-            your first 50 users, newsletter partners, or clients without your emails sounding robotic.
+            your users, newsletter partners, or clients without your emails sounding robotic.
           </p>
 
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center text-lime-400 font-bold mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
