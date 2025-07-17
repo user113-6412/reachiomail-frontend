@@ -36,7 +36,7 @@ export default function Home() {
           </p>
 
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center text-lime-400 font-bold mb-8 sm:mb-12 max-w-3xl mx-auto px-2">
-            Powered by AI - Get started with no add-ons or signups.
+            Powered by AI. Get started with no add-ons or signups.
           </p>
           
           <p className="text-lg sm:text-xl text-center mb-8 sm:mb-10 max-w-2xl mx-auto px-2">

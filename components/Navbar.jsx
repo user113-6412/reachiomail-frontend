@@ -18,7 +18,7 @@ function Navbar() {
                 </div>
                 <div className="flex flex-col">
                   <Link href="/"><span className="text-lg sm:text-xl font-bold text-gray-900">ReachioMail</span></Link>
-                  <span className="text-xs text-gray-900 font-bold -mt-1 hidden sm:block">Merge From Sheets</span>
+                  
                 </div>
               </div>
             </div>
