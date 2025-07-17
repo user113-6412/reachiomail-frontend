@@ -20,8 +20,8 @@ function Footer() {
             </div>
 
             <p className="text-gray-600 mb-6 mt-4 max-w-md">
-              You searched for Mail Merge with Google Sheets. ReachioMail lets you do exactly that, with AI and no add-ons. 
-              Upload a CSV, let AI craft the perfect intro, and hit send straight from your Gmail. No integrations required.
+               
+              Upload a CSV, let AI craft the perfect intro, and hit send straight from your Gmail. No integrations or ad ons required.
             </p>
 
             {/* Social Links SVG placeholders */}
