@@ -273,7 +273,7 @@ function DemoModal({ isOpen, onClose }) {
                     disabled={!email || isSending}
                     className="mt-2 w-full bg-orange-400 hover:bg-orange-600 disabled:bg-gray-300 text-white font-medium py-3 px-6 rounded-lg transition-colors"
                   >
-                    {isSending ? 'Sending...' : 'TEST: Send to my email'}
+                    {isSending ? 'Sending...' : '🎯 Test It on Yourself First — No Setup Needed'}
                   </button>
 
                   <button
@@ -281,7 +281,7 @@ function DemoModal({ isOpen, onClose }) {
                     
                     className="mt-2 w-full bg-lime-100 hover:bg-lime-400 disabled:bg-gray-300 text-black font-medium text-md py-3 px-6 rounded-lg transition-colors border-2 border-lime-500"
                   >
-                     🎉 Send to my csv list 🎉
+                     🔒 Send to List (Coming Soon — Will Require Signup)
                   </button>
 
                   {notification && (

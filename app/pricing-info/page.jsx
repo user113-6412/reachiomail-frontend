@@ -20,10 +20,10 @@ export default function Pricing() {
           </div>
 
           {/* Pricing Card */}
-          <div className="max-w-md mx-auto">
+          <div className="max-w-lg mx-auto">
             <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Free Forever</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Free to Start</h3>
                 <div className="mb-6">
                   <span className="text-4xl font-black text-lime-400">$0</span>
                   <span className="text-gray-600">/month</span>
@@ -34,7 +34,7 @@ export default function Pricing() {
                     <svg className="w-5 h-5 text-lime-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    Up to 100 emails per month
+                    We are shaping the future of this together
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-lime-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -73,15 +73,12 @@ export default function Pricing() {
           {/* FAQ Section */}
           <div className="mt-16">
             <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-            <div className="space-y-6 max-w-2xl mx-auto">
+            <div className="space-y-6 max-w-3xl mx-auto">
               <div>
                 <h3 className="text-lg font-semibold mb-2">Is it really free?</h3>
-                <p className="text-gray-600">Yes! We're launching with a free tier to help you get started. We may introduce paid plans in the future, but existing free users will be grandfathered in.</p>
+                <p className="text-gray-600">Yes! We're launching with a free tier to help you get started. We are a small team and are keen to get your feedback which will shape the future of this product.</p>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">What happens when I reach 100 emails?</h3>
-                <p className="text-gray-600">You'll receive a notification when you're close to your limit. For now, you can continue using the service while we work on expanding the free tier.</p>
-              </div>
+
               <div>
                 <h3 className="text-lg font-semibold mb-2">Do you store my email data?</h3>
                 <p className="text-gray-600">No, we don't store your email data permanently. CSV files are processed in memory and deleted immediately after use.</p>

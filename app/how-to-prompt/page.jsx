@@ -23,14 +23,14 @@ export default function HowToPrompt() {
 
           {/* Core Concept */}
           <div className="bg-gradient-to-r from-lime-50 to-orange-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-center">The Psychology of Automated Outreach</h2>
-            <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-4 text-center">The Psychology of Modern Outreach</h2>
+            <div className="max-w-4xl mx-auto text-center">
               <p className="text-gray-700 mb-4">
-                Cold emails work when you lead with <strong>one impressive win</strong>, connect it to their world, and ask for something simple. 
-                That's it. No resume dumps, no life stories.
+                Great outreach isn’t about shouting louder — it’s about relevance. The best cold emails highlight one specific win, connect it to the recipient’s world, and ask for something simple. 
+                <strong> Short. Useful. Human. That’s how you get replies.</strong>
               </p>
               <p className="text-gray-600 text-sm">
-                Think: "I'm great at X. You should know that. Here's why I'm worth your attention—quickly."
+                Think: “Here’s what I helped someone like you achieve — want the same result?”
               </p>
             </div>
           </div>
@@ -62,11 +62,11 @@ export default function HowToPrompt() {
 
           {/* Key Insight */}
           <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-center mb-4">Remember: This is About Numbers</h2>
+            <h2 className="text-2xl font-bold text-center mb-4">Remember: This IS About Numbers</h2>
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-gray-700 mb-4">
                 You’re not writing a flawless email just to have it buried under Monday’s spam. You're scaling credibility across hundreds of prospects. 
-                Keep it simple, keep it braggy, keep it moving.
+                Keep it simple, keep it human, keep it moving.
               </p>
               <p className="text-gray-600 text-sm">
                 <strong>1 win + 1 connection + 1 ask = Automated email campaign that converts</strong>
