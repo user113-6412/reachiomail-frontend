@@ -2,26 +2,9 @@ import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import { personas, getPersonaIcon } from '../../components/PersonasConfig';
 
 export default function HowToPrompt() {
-  const promptExamples = {
-    freelancer: {
-      title: "Freelancer Agency",
-      description: "Pitch services to prospects",
-      prompt: "Write a friendly intro email to {{Name}}, a {{Role}} at {{Company}}. Say I recently helped a similar client grow their inbound leads by 40% in 2 months. Mention I specialize in marketing growth and would love to explore if we could collaborate."
-    },
-    jobseeker: {
-      title: "Career Conqueror", 
-      description: "Reach hiring managers",
-      prompt: "Write a confident cold email to {{Name}}, a {{Role}} at {{Company}}. Mention I recently led a product launch that hit 50K users in 3 months, and I'm now exploring new opportunities. Say I admire their work and would love to connect."
-    },
-    founder: {
-      title: "SaaS Founder",
-      description: "Talk to early customers", 
-      prompt: "Write a short intro email to {{Name}}, a {{Role}} at {{Company}}. Say I'm the founder of a scheduling tool that cut coordination time by 60% for early users. Ask if they'd be open to a quick chat to see if this could help their team too."
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -55,21 +38,21 @@ export default function HowToPrompt() {
           {/* The Formula */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-center mb-8">The 3-Line Formula</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {Object.entries(promptExamples).map(([key, category]) => (
+            <div className="grid md:grid-cols-2 gap-6">
+              {Object.entries(personas).map(([key, persona]) => (
                 <div key={key} className="bg-white border border-gray-200 rounded-xl p-6">
                   <div className="text-center mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{category.title}</h3>
-                    <p className="text-sm text-gray-600">{category.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{persona.title}</h3>
+                    <p className="text-sm text-gray-600">{persona.description}</p>
                   </div>
                   
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                    <pre className="text-gray-800 font-mono text-xs leading-relaxed whitespace-pre-wrap">{category.prompt}</pre>
+                    <pre className="text-gray-800 font-mono text-xs leading-relaxed whitespace-pre-wrap">{persona.prompt}</pre>
                   </div>
                   
                   <div className="mt-4 text-center">
                     <span className="bg-lime-100 text-lime-800 text-xs font-medium px-2 py-1 rounded-full">
-                      {key === 'freelancer' ? '🚀' : key === 'jobseeker' ? '💼' : '🧑‍💻'}
+                      {getPersonaIcon(key)}
                     </span>
                   </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { personas } from './PersonasConfig';
 
 function DemoModal({ isOpen, onClose }) {
   const [csvFile, setCsvFile] = useState(null);
@@ -11,28 +12,7 @@ function DemoModal({ isOpen, onClose }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [email, setEmail] = useState('');
-
-  // Persona configurations
-  const personas = {
-    freelancer: {
-      name: 'Freelancer Agency',
-      description: 'Pitch service to prospects',
-      prompt: 'My name is Anabel. Write a friendly intro email to {{Name}}, a {{Role}} at {{Company}}. Say I recently helped a similar client grow their inbound leads by 40% in 2 months. Mention I specialize in marketing growth and would love to explore if we could collaborate.',
-      csvContent: 'Name,Email,Company,Role\nGrace Miller,grace@midnightventures.com,Midnight Ventures,Partner\nTom Jacobs,tom@foundryanalytics.io,Foundry Analytics,CTO\nSarah Chen,sarah@techstartup.co,TechStartup,Marketing Director'
-    },
-    careerconquerer: {
-      name: 'Career Conquerer',
-      description: 'Reach hiring managers',
-      prompt: 'My name is Anabel. Write a confident cold email to {{Name}}, a {{Role}} at {{Company}}. Mention I recently led a product launch that hit 50K users in 3 months, and I’m now exploring new opportunities. Say I admire their work and would love to connect.',
-      csvContent: 'Name,Email,Company,Role\nAlex Johnson,alex@innovatecorp.com,InnovateCorp,Senior Developer\nMaria Rodriguez,maria@techgiant.io,TechGiant,Product Manager\nDavid Kim,david@startupx.com,StartupX,UX Designer'
-    },
-    founder: {
-      name: 'SaaS Founder',
-      description: 'Talk to early customers',
-      prompt: 'My name is Anabel.Write a short intro email to {{Name}}, a {{Role}} at {{Company}}. Say I’m the founder of a scheduling tool that cut coordination time by 60% for early users. Ask if they’d be open to a quick chat to see if this could help their team too.',
-      csvContent: 'Name,Email,Company,Role\nEmma Wilson,emma@growthco.com,GrowthCo,Operations Manager\nJames Lee,james@scaleup.io,ScaleUp,CEO\nLisa Park,lisa@startupz.com,StartupZ,COO'
-    }
-  };
+  const [notification, setNotification] = useState('');
 
   // Update prompt when persona changes
   const handlePersonaChange = (newPersona) => {
@@ -135,6 +115,17 @@ function DemoModal({ isOpen, onClose }) {
     } finally {
       setIsSending(false);
     }
+  }
+
+  async function fnSendCsvList() {
+    // track analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'demo_send_csv_list', {
+        event_category: 'demo',
+        event_label: 'csv_list_sent'
+      });
+    }
+    setNotification((prev) => prev === 'Coming soon!' ? '' : 'Coming soon!');
   }
 
   if (!isOpen) return null;
@@ -266,7 +257,7 @@ function DemoModal({ isOpen, onClose }) {
                 <div className="mt-6 space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Send to your email:
+                      Send to your email to test:
                     </label>
                     <input
                       type="email"
@@ -280,11 +271,25 @@ function DemoModal({ isOpen, onClose }) {
                   <button
                     onClick={fnSendTestEmail}
                     disabled={!email || isSending}
-                    className="mt-2 w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                    className="mt-2 w-full bg-orange-400 hover:bg-orange-600 disabled:bg-gray-300 text-white font-medium py-3 px-6 rounded-lg transition-colors"
                   >
-                    {isSending ? 'Sending...' : 'Send to my email'}
+                    {isSending ? 'Sending...' : 'TEST: Send to my email'}
                   </button>
-                  
+
+                  <button
+                    onClick={fnSendCsvList}
+                    
+                    className="mt-2 w-full bg-lime-100 hover:bg-lime-400 disabled:bg-gray-300 text-black font-medium text-md py-3 px-6 rounded-lg transition-colors border-2 border-lime-500"
+                  >
+                     🎉 Send to my csv list 🎉
+                  </button>
+
+                  {notification && (
+                    <div className="mt-2 text-sm text-gray-500">
+                      {notification}
+                    </div>
+                  )}
+
                 </div>
               )}
             </div>

@@ -39,9 +39,9 @@ export default function Home() {
             Mail Merge from Google Sheets 
           </h1> 
           
-          <p className="text-5xl text-center font-black leading-tight mb-12 max-w-5xl mx-auto">
-            <span className="text-lime-400">ReachioMail </span> 
-             helps you send personalized emails straight from Gmail 
+          <p className="text-4xl text-center font-black leading-tight mb-12 max-w-5xl mx-auto">
+            <span className="text-lime-400">Reach  </span> 
+            your first 50 users, newsletter partners, or clients without your emails sounding robotic.
           </p>
 
           <p className="text-4xl text-center text-lime-400 font-bold mb-12 max-w-3xl mx-auto">
@@ -59,6 +59,12 @@ export default function Home() {
           >
             Upload CSV Contact List →
           </button>
+
+          <p className="text-sm mt-8 text-center text-gray-500">
+            ❌ Not for spammers. ✅ Built for founders and consultants doing real outreach, not mass-blasts.
+          </p>
+
+          
         </div>
 
       </main>
