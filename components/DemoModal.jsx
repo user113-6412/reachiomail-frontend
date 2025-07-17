@@ -67,7 +67,7 @@ function DemoModal({ isOpen, onClose }) {
         
         // Track analytics
         if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'ai_generated_preview', {
+          window.gtag('event', 'user_generated_ai_preview', {
             event_category: 'demo',
             event_label: 'user_generated_ai_preview'
           });
