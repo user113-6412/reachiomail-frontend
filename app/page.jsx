@@ -8,21 +8,12 @@ import DemoModal from '../components/DemoModal';
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    // Track pageview
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'pageview_lp_mm_ai', {
-        event_category: 'pageview',
-        event_label: 'landing_page_mailmerge_ai'
-      });
-    }
-  }, []);
 
   function fnHandleCtaClick() {
     setIsModalOpen(true);
     // Track CTA click
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'click_lp_mmai_demo', {
+      window.gtag('event', 'user_clicked_try_demo_btn', {
         event_category: 'cta_click',
         event_label: 'demo_modal_open'
       });

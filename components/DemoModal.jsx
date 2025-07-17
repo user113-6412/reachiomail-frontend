@@ -31,7 +31,7 @@ function DemoModal({ isOpen, onClose }) {
       setCsvFile(file);
       // Track analytics
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'demo_upload_csv', {
+        window.gtag('event', 'user_uploaded_csv', {
           event_category: 'demo',
           event_label: 'csv_upload'
         });
@@ -67,9 +67,9 @@ function DemoModal({ isOpen, onClose }) {
         
         // Track analytics
         if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'demo_ai_done', {
+          window.gtag('event', 'ai_generated_preview', {
             event_category: 'demo',
-            event_label: 'ai_generation_complete'
+            event_label: 'user_generated_ai_preview'
           });
         }
       } else {
@@ -101,7 +101,7 @@ function DemoModal({ isOpen, onClose }) {
       if (response.ok) {
         // Track analytics
         if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'demo_send_email', {
+          window.gtag('event', 'user_sent_self_email', {
             event_category: 'demo',
             event_label: 'email_sent'
           });
@@ -120,7 +120,7 @@ function DemoModal({ isOpen, onClose }) {
   async function fnSendCsvList() {
     // track analytics
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'demo_send_csv_list', {
+      window.gtag('event', 'user_wants_full_list', {
         event_category: 'demo',
         event_label: 'csv_list_sent'
       });
