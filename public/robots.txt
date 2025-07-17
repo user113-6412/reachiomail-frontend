@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mailmergefromsheets.com/sitemap.xml
+Sitemap: https://reachiomail.com/sitemap.xml
 
 # Disallow admin or private areas (if any)
 Disallow: /api/
