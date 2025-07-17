@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import DemoModal from '../components/DemoModal';
@@ -27,7 +27,7 @@ export default function Home() {
       <main className="flex-1 flex items-center justify-center px-4 py-8 sm:py-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-center mb-6 sm:mb-8 px-2">
-            AI Email Writer for Personalized Outreach
+            AI Email Writer for Personalized Reach
           </h1> 
           
           <p className="text-2xl sm:text-3xl md:text-4xl text-center font-black leading-tight mb-8 sm:mb-12 max-w-5xl mx-auto px-2">
